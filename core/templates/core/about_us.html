@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateNow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">InnovateNow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                {% for item in navbar_items %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ item.url }}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+<div class="jumbotron jumbotron-fluid bg-light">
+    <div class="container my-5">
+        <h1 class="display-4 text-center mb-4">Quiénes Somos</h1>
+        <!-- Contenido principal -->
+        <div class="about-section mb-5">
+            <p>{{ about_us_content.content }}</p>
+        </div>
+        
+        <hr>
+        <!-- Nuestra Misión -->
+        <div class="mission-section mb-5">
+            <h2 class="section-title">Nuestra Misión</h2>
+            <p>{{ about_us_content.mission }}</p>
+        </div>
+        
+        <!-- Nuestra Historia -->
+        <div class="history-section mb-5">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <p>{{ about_us_content.history }}</p>
+        </div>
+        
+        <!-- Empresas Ayudadas -->
+        <div class="helped-companies-section mb-5">
+            <h2 class="section-title">Empresas que Hemos Ayudado</h2>
+            <ul class="list-group">
+                {% for company in about_us_content.helped_companies.all %}
+                <li class="list-group-item">
+                    <h5>{{ company.name }}</h5>
+                    <p>{{ company.description }}</p>
+                    <small class="text-muted">Fundada en: {{ company.year_founded }}</small>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <!-- Importancia del Trabajo en Equipo -->
+        <div class="teamwork-section">
+            <h2 class="section-title">Importancia del Trabajo en Equipo</h2>
+            <p>En InnovateNow, creemos firmemente que el trabajo en equipo es fundamental para el éxito. Nuestros valores principales incluyen:</p>
+            <ul class="values-list">
+                <li><strong>Colaboración:</strong> Fomentamos un ambiente de colaboración donde todos los miembros del equipo contribuyen con sus ideas y habilidades únicas.</li>
+                <li><strong>Comunicación Abierta:</strong> La comunicación abierta y honesta es clave para resolver problemas y avanzar juntos.</li>
+                <li><strong>Compromiso:</strong> Nos comprometemos a apoyar a nuestros clientes y a trabajar juntos hacia objetivos comunes.</li>
+                <li><strong>Innovación:</strong> Valoramos la innovación y alentamos a nuestro equipo a pensar creativamente y buscar soluciones nuevas.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

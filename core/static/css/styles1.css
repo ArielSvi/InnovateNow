@@ -1,0 +1,166 @@
+/* Estilos generales */
+body {
+    background-image: url('/static/img/fondo.png');
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Color del texto principal */
+    font-family: 'Arial', sans-serif; /* Familia de fuentes para todo el cuerpo */
+}
+
+/* Estilos para la sección principal */
+.jumbotron {
+    background-color: #f8f9fa; /* Color de fondo */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.container {
+    max-width: 900px; /* Ancho máximo del contenido para centrarlo */
+    margin: auto; /* Centrar el contenido horizontalmente */
+}
+
+.display-4 {
+    font-size: 3rem; /* Tamaño del título principal */
+    color: #343a40; /* Color del título oscuro */
+    margin-bottom: 2rem; /* Espacio inferior */
+    text-align: center; /* Centrar el texto */
+}
+
+.lead {
+    font-size: 1.25rem; /* Tamaño del texto de introducción */
+    color: #555; /* Color del texto más oscuro */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 2rem; /* Espacio inferior */
+}
+
+/* Estilos para las secciones */
+.container.my-5 {
+    margin-top: 3rem; /* Espacio superior */
+    margin-bottom: 3rem; /* Espacio inferior */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Tamaño del título de sección */
+    color: #343a40; /* Color del título oscuro */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para los testimonios */
+
+.card {
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Radio de borde */
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transiciones */
+    box-shadow: 2 4px 10px rgba(0, 0, 0); /* Sombra suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.card-body {
+    padding: 1.5rem; /* Relleno del cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.4rem; /* Tamaño del título de tarjeta */
+    font-weight: bold; /* Peso de la fuente */
+    margin-bottom: 0.75rem; /* Espacio inferior */
+    color: #343a40; /* Color del título oscuro */
+}
+
+.card-text {
+    font-size: 1.1rem; /* Tamaño del texto de tarjeta */
+    color: #666; /* Color del texto gris oscuro */
+}
+
+
+/* Estilos para el carrusel */
+.carousel-item img {
+    border-radius: 10px; /* Radio de borde de las imágenes del carrusel */
+    height: 400px; /* Altura de las imágenes del carrusel */
+    object-fit: cover; /* Ajuste del tamaño de la imagen */
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto; /* Ancho automático */
+}
+
+
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem; /* Reducción del tamaño del título principal */
+    }
+    .lead {
+        font-size: 1rem; /* Reducción del tamaño del texto de introducción */
+    }
+}
+
+/* Ajustes adicionales de color y contraste */
+.bg-light {
+    background-color: #f8f9fa !important; /* Fondo claro */
+    color: #555; /* Texto gris oscuro */
+}
+
+.bg-dark {
+    background-color: #343a40 !important; /* Fondo oscuro */
+    color: #f8f9fa; /* Texto blanco */
+}
+
+.btn-primary {
+    background-color: #3c4044; /* Color de fondo botón primario */
+    border-color: #2c3034; /* Color del borde botón primario */
+    color: #fff; /* Color del texto botón primario */
+}
+
+.btn-primary:hover {
+    background-color: #cacaca; /* Color de fondo al pasar el ratón */
+    border-color: #cacaca; /* Color del borde al pasar el ratón */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Color de fondo botón secundario */
+    border-color: #6c757d; /* Color del borde botón secundario */
+    color: #fff; /* Color del texto botón secundario */
+}
+
+.btn-secondary:hover {
+    background-color: #495057; /* Color de fondo al pasar el ratón */
+    border-color: #495057; /* Color del borde al pasar el ratón */
+}
+
+.list-group-item {
+    background-color: #f8f9fa; /* Color de fondo de los elementos de lista */
+    border-color: #ddd; /* Color del borde de los elementos de lista */
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el ratón */
+    border-color: #ccc; /* Color del borde al pasar el ratón */
+}
+
+.text-muted {
+    color: #777; /* Color del texto tenue */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #343a40; /* Color de fondo de los controles del carrusel */
+    border-color: #343a40; /* Color del borde de los controles del carrusel */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #1d2124; /* Color de fondo al pasar el ratón */
+    border-color: #1d2124; /* Color del borde al pasar el ratón */
+}
